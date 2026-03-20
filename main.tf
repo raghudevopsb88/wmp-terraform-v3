@@ -20,7 +20,7 @@ resource "aws_instance" "instance" {
 
 variable "components" {
   default = {
-    portfolio-service = ""
+    portfolio-service = "x"
     frontend = ""
     postgresql = ""
     auth-service = ""
