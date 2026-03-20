@@ -20,11 +20,11 @@ resource "aws_route53_record" "dns" {
 
 variable "components" {
   default = {
+    portfolio-service = ""
     frontend = ""
     postgresql = ""
     auth-service = ""
     analytics-service = ""
-    portfolio-service = ""
   }
 }
 
