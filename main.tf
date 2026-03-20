@@ -9,14 +9,14 @@ resource "aws_instance" "instance" {
   }
 }
 
-resource "aws_route53_record" "dns" {
-  for_each = var.components
-  zone_id = "Z08243203OP3MKK8XQJHA"
-  name    = "${var.components[each.key]}-dev"
-  type    = "A"
-  ttl     = 30
-  records = [aws_instance.instance[each.key].private_ip]
-}
+# resource "aws_route53_record" "dns" {
+#   for_each = var.components
+#   zone_id = "Z08243203OP3MKK8XQJHA"
+#   name    = "${var.components[each.key]}-dev"
+#   type    = "A"
+#   ttl     = 30
+#   records = [aws_instance.instance[each.key].private_ip]
+# }
 
 variable "components" {
   default = {
